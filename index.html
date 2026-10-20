@@ -3,19 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ритм давления — дневник давления</title>
+<title>Ритм давления — дневник давления и пульса для Android</title>
+<meta name="description" content="Дневник давления и пульса без рекламы: скан экрана тонометра камерой, графики, PDF для врача, запись в ЕМИАС через Health Connect. Инструкции с фото.">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ритм давления",
+  "description": "Дневник давления и пульса: скан экрана тонометра, графики, PDF для врача, запись в Health Connect для ЕМИАС.ИНФО.",
+  "operatingSystem": "Android 9+",
+  "applicationCategory": "HealthApplication",
+  "inLanguage": "ru",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
+  "downloadUrl": "https://www.rustore.ru/catalog/app/ru.ivanovvl.ritmdavleniya"
+}
+</script>
+<link rel="canonical" href="https://ivanovvl.ru/ritm/">
+<script>if(location.hostname.endsWith("github.io"))location.replace("https://ivanovvl.ru/ritm"+location.pathname.replace(/^\/ritm/,"")+location.search+location.hash)</script>
 </head>
 <body>
 <main>
 <h1>Ритм давления</h1>
-<p class="lead">Дневник давления и пульса для Android.</p>
+<p class="lead">Дневник давления и пульса для Android — без рекламы. Наведите камеру на экран тонометра,
+и давление с пульсом сами попадут в дневник.</p>
+<p><a class="store" href="https://www.rustore.ru/catalog/app/ru.ivanovvl.ritmdavleniya?utm_source=site&amp;utm_content=main">Скачать в RuStore — бесплатно</a></p>
+
+<figure class="shot">
+<img src="img/scan.jpg" width="540" height="960" alt="Сканирование: камера читает 143/101 и пульс 59 с экрана тонометра Omron, запись готова к сохранению">
+<figcaption>Скан экрана: проверьте цифры — запись сохранится сама.</figcaption>
+</figure>
+
 <ul>
-<li>Тонометр Andon KD-5907 в Mi Home — измерения загружаются сами.</li>
-<li>Любой тонометр — снимите экран камерой или введите вручную.</li>
-<li>Графики, средние, утро и вечер, категории давления ВОЗ.</li>
+<li>Любой способ записи: скан экрана тонометра, ручной ввод, Andon KD-5907 из Mi Home, давление других приложений из Health Connect.</li>
+<li>Графики, средние утром и вечером, категории давления ВОЗ, календарь месяца.</li>
+<li>PDF для врача за любой период — с графиком и средними на первой странице.</li>
 <li>Запись в Health Connect — давление увидит ЕМИАС.ИНФО.</li>
 <li>Напоминания утром и вечером. Журнал хранится только на телефоне.</li>
+</ul>
+
+<h2>Инструкции</h2>
+<ul class="guides">
+<li><a href="scan/">Как перенести давление с тонометра в телефон</a> — скан экрана камерой, память тонометра серией</li>
+<li><a href="tonometry/">Какие тонометры читает сканер</a> — проверенные модели и что делать, если вашего нет</li>
+<li><a href="emias/">Как передать давление в ЕМИАС</a> — через Health Connect, по шагам</li>
+<li><a href="vrachu/">Дневник давления для врача</a> — PDF за период, неделя домашних измерений</li>
+<li><a href="mi-home/">Тонометр Andon KD-5907 и Mi Home</a> — измерения загружаются сами</li>
+<li><a href="kak-izmeryat/">Как правильно измерять давление дома</a></li>
+<li><a href="normy/">Категории давления по ВОЗ</a> — что значат цифры в дневнике</li>
+<li><a href="csv.html">Перенос из другого дневника</a> — формат CSV</li>
 </ul>
 
 <h2>Поддержка</h2>
@@ -30,11 +66,15 @@
 <p>Тонометр должен выгрузить измерение по Wi-Fi — проверьте, что оно появилось в Mi Home. Облако Xiaomi
 часто отвечает с ошибкой — приложение повторяет запросы само; если не помогло, нажмите «Обновить» позже.
 Измерение можно добавить сканером — потом его заменит загруженное из облака.</p>
+<h3>Как перенести записи из другого дневника</h3>
+<p>Выгрузите историю из прежнего приложения или таблицы в файл CSV и загрузите: Настройки → «Экспорт и
+импорт журнала» → «Импорт из CSV». Приложение само найдёт столбцы даты, давления и пульса и покажет,
+как записи лягут в журнал. Каким должен быть файл — <a href="csv.html">формат CSV</a>.</p>
 <h3>Давление не видно в ЕМИАС.ИНФО</h3>
 <p>Включите в настройках запись в Health Connect и дайте разрешения. ЕМИАС забирает из Health Connect
-только новые записи — откройте ЕМИАС.ИНФО после записи.</p>
+только новые записи — откройте ЕМИАС.ИНФО после записи. Подробно — <a href="emias/">по шагам</a>.</p>
 
-<p class="muted"><a href="en/">English</a> · <a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Условия подписки</a> · Приложение не является
+<p class="muted"><a href="https://ivanovvl.ru/">Другие приложения</a> · <a href="en/">English</a> · <a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Условия подписки</a> · Приложение не является
 медицинским изделием. Xiaomi, Mi Home и iHealth — товарные знаки их владельцев; приложение с ними не связано.</p>
 </main>
 </body>

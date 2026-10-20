@@ -32,3 +32,25 @@ a { color: var(--accent); }
 code { font-size: 0.9em; overflow-wrap: anywhere; }
 .lead { font-size: 1.15rem; }
 .muted { color: var(--muted); font-size: 0.92rem; }
+ol { padding-left: 1.4em; }
+.scroll { overflow-x: auto; margin: 12px 0; }
+table { border-collapse: collapse; font-size: 0.95rem; }
+th, td { border: 1px solid var(--rule); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { font-weight: 600; }
+pre { overflow-x: auto; padding: 12px; border: 1px solid var(--rule); border-radius: 8px; line-height: 1.45; }
+pre code { overflow-wrap: normal; }
+.crumbs { margin: 0 0 24px; font-size: 0.95rem; }
+.crumbs a { text-decoration: none; font-weight: 600; }
+.store {
+  display: inline-block; margin: 8px 0; padding: 12px 22px; border-radius: 999px;
+  background: var(--accent); color: var(--bg); font-weight: 600; text-decoration: none;
+}
+.shot { margin: 16px 0; }
+.shot img { display: block; width: 100%; max-width: 300px; height: auto; border-radius: 12px; border: 1px solid var(--rule); }
+.shot figcaption { color: var(--muted); font-size: 0.92rem; margin-top: 6px; max-width: 300px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin: 16px 0; }
+.shots .shot { margin: 0; }
+.guides { list-style: none; padding: 0; }
+.guides li { margin: 10px 0; }
+.guides a { font-weight: 600; }
+.note { padding: 12px 16px; border-left: 4px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 0 8px 8px 0; }

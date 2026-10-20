@@ -1,5 +1,7 @@
 # Ритм давления
 
-Сайт приложения «Ритм давления»: [страница поддержки](https://vlad-iv.github.io/ritm/) [политика конфиденциальности](https://vlad-iv.github.io/ritm/privacy.html) и [условия подписки «Плюс»](https://vlad-iv.github.io/ritm/terms.html).
+Сайт приложения «Ритм давления» переехал на **https://ivanovvl.ru/ritm/**: [инструкции и поддержка](https://ivanovvl.ru/ritm/),
+[политика конфиденциальности](https://ivanovvl.ru/ritm/privacy.html), [условия подписки «Плюс»](https://ivanovvl.ru/ritm/terms.html).
 
+Здесь — копия для старых ссылок: каждая страница переадресует на тот же адрес на ivanovvl.ru.
 Исходники сайта ведутся в основном (закрытом) репозитории приложения, папка `site/`.

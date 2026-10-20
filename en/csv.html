@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSV format — BP Rhythm</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://ivanovvl.ru/ritm/en/csv.html">
+<script>if(location.hostname.endsWith("github.io"))location.replace("https://ivanovvl.ru/ritm"+location.pathname.replace(/^\/ritm/,"")+location.search+location.hash)</script>
+</head>
+<body>
+<main>
+<p><a href="./">← BP Rhythm</a></p>
+<h1>CSV format</h1>
+<p class="lead">How to move readings into BP Rhythm from another diary, app or Excel spreadsheet.</p>
+
+<h2>In brief</h2>
+<ul>
+<li>You need a CSV file: one row per reading, column names in the first row.</li>
+<li>Date, systolic and diastolic are required. Time, pulse and note are optional.</li>
+<li>In the app: Settings → “Export and import log” → “Import from CSV”. If the file is not from BP Rhythm,
+the app shows the “Match the columns” screen: check which column means what and see how the first rows
+will go into the log.</li>
+<li>Import is free. Loading the same file again does not create duplicates.</li>
+</ul>
+
+<h2>The simplest file</h2>
+<div class="scroll"><table>
+<tr><th>Date</th><th>Time</th><th>Systolic</th><th>Diastolic</th><th>Pulse</th><th>Note</th></tr>
+<tr><td>2026-09-01</td><td>07:30</td><td>132</td><td>85</td><td>68</td><td>after waking up</td></tr>
+<tr><td>2026-09-01</td><td>19:05</td><td>141</td><td>90</td><td>74</td><td></td></tr>
+<tr><td>2026-09-02</td><td>07:42</td><td>128</td><td>82</td><td></td><td>coffee</td></tr>
+</table></div>
+<pre><code>Date,Time,Systolic,Diastolic,Pulse,Note
+2026-09-01,07:30,132,85,68,after waking up
+2026-09-01,19:05,141,90,74,
+2026-09-02,07:42,128,82,,coffee</code></pre>
+
+<h3>What the app understands by itself</h3>
+<ul>
+<li><b>Column names</b> in English and Russian: “Date”, “Time”, “Date/Time”, “Systolic”, “SYS”,
+“Diastolic”, “DIA”, “Pulse”, “HR”, “Heart rate”, “Note”, “Comment”, “Irregular heartbeat”. No names —
+columns are guessed from the values.</li>
+<li><b>Blood pressure in one column</b>: <code>132/85</code> (or <code>132/85/68</code> with pulse).</li>
+<li><b>Dates</b>: <code>2026-09-01</code>, <code>01.09.2026</code>, <code>09/01/2026</code> and
+<code>01/09/2026</code>, <code>Sep 1, 2026</code>. If the file doesn’t show which is the day and which is
+the month, the app asks.</li>
+<li><b>Time</b>: <code>07:30</code>, <code>07:30:15</code>, <code>7:30 PM</code> — in its own column or
+together with the date. Without a time the reading is placed at noon.</li>
+<li><b>Separator</b> — semicolon, comma or tab; <b>encoding</b> — UTF-8 or Windows-1251. Put text that
+contains the separator in quotes: <code>"after waking up, sitting"</code>.</li>
+</ul>
+
+<h3>What will not go into the log</h3>
+<p>Rows without a date or blood pressure and with impossible values: systolic not between 60 and 300,
+diastolic not between 30 and 200, systolic not above diastolic, pulse not between 30 and 250, a date in the
+future. Before importing, the app shows how many rows are skipped and why, with row numbers. Readings
+already in the log (same blood pressure within a minute) are not duplicated.</p>
+
+<h2>How to prepare your file</h2>
+<ol>
+<li>Export the history from your previous app — usually “Export” or “Share” → CSV or Excel.</li>
+<li>Open it in Excel or Google Sheets. Keep one header row, then one row per reading. Extra columns
+(weight, mood) can stay — just don’t choose them.</li>
+<li>Save: Excel — “File → Save As → CSV UTF-8”; Google Sheets — “File → Download → CSV”.</li>
+<li>Send the file to your phone and load it: Settings → “Export and import log” → “Import from CSV”.</li>
+</ol>
+<p>Imported readings are marked “manual”: you can delete them from the log like readings entered by hand.</p>
+
+<h2>BP Rhythm log format</h2>
+<p>“Export to CSV” saves the whole log; the file opens in Excel and loads back without questions. UTF-8
+with BOM, semicolon separator, oldest first. Column names are in Russian:</p>
+<div class="scroll"><table>
+<tr><th>Column</th><th>Contents</th></tr>
+<tr><td>Дата</td><td>date, <code>DD.MM.YYYY</code>, phone time zone — for Excel</td></tr>
+<tr><td>Время</td><td>time, <code>HH:MM</code> — for Excel</td></tr>
+<tr><td>SYS</td><td>systolic, mmHg</td></tr>
+<tr><td>DIA</td><td>diastolic, mmHg</td></tr>
+<tr><td>Пульс</td><td>pulse, bpm; <code>0</code> — no pulse</td></tr>
+<tr><td>Аритмия</td><td>arrhythmia: <code>да</code> (yes) or <code>нет</code> (no)</td></tr>
+<tr><td>Уровень ВОЗ</td><td>level shown by the monitor (empty for manual readings)</td></tr>
+<tr><td>Тонометр</td><td>monitor or source app name</td></tr>
+<tr><td>MeasureTime</td><td>moment of the reading in unix seconds — the app reads the time from it</td></tr>
+<tr><td>DataID</td><td>record id — prevents duplicates</td></tr>
+<tr><td>Заметка</td><td>note</td></tr>
+<tr><td>Метки</td><td>tags, comma-separated</td></tr>
+</table></div>
+<p>You don’t have to convert your file to this format: the columns from “The simplest file” are enough.</p>
+
+<p class="muted"><a href="./">BP Rhythm</a> · <a href="../csv.html">Русский</a> · The app is not a medical device.</p>
+</main>
+</body>
+</html>
