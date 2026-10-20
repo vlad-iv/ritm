@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ритм давления — дневник давления и пульса для Android</title>
 <meta name="description" content="Дневник давления и пульса без рекламы: скан экрана тонометра камерой, графики, PDF для врача, запись в ЕМИАС через Health Connect. Инструкции с фото.">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/icon.png" type="image/png">
+<link rel="stylesheet" href="style.css?v=4">
+<script src="/menu.js?v=1" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,24 +25,74 @@
 <script>if(location.hostname.endsWith("github.io"))location.replace("https://ivanovvl.ru/ritm"+location.pathname.replace(/^\/ritm/,"")+location.search+location.hash)</script>
 </head>
 <body>
+<header class="topbar">
+<div class="wrap topbar-in">
+<a class="brand" href="/">ivanovvl.ru</a>
+<nav class="topnav" aria-label="Разделы">
+<a aria-current="page" href="/ritm/">Ритм давления</a>
+<a href="/pranayama/">Пранаяма</a>
+<a href="https://bigcaller.ru/">BigCaller</a>
+<a href="/#ustanovka">Как установить</a>
+<a href="/podderzhka/">Помощь</a>
+</nav>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="menu-label">Меню</span></button>
+</div>
+<nav class="menu" id="menu" aria-label="Меню сайта" hidden>
+<div class="wrap">
+<p class="menu-title">Приложения</p>
+<a aria-current="page" href="/ritm/"><img src="/img/ritm.png" width="48" height="48" alt=""><span>Ритм давления</span></a>
+<a href="/pranayama/"><img src="/img/pranayama.png" width="48" height="48" alt=""><span>Пранаяма</span></a>
+<a href="https://bigcaller.ru/"><img src="/img/bigcaller.png" width="48" height="48" alt=""><span>BigCaller</span></a>
+<hr>
+<a href="/#ustanovka"><i aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></i><span>Как установить</span></a>
+<a href="/novosti/"><i aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1z"/></svg></i><span>Что нового</span></a>
+<a href="/podderzhka/"><i aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17.5h.01"/></svg></i><span>Помощь и удаление данных</span></a>
+<a class="btn btn-accent menu-mail" href="mailto:vladivv@bk.ru?subject=%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8E">Написать разработчику</a>
+</div>
+</nav>
+</header>
+<header class="app-hero">
+<div class="wrap">
+<div class="app-hero-text">
+<div class="card-head"><img src="img/icon.png" width="64" height="64" alt="">
+<div><p class="kicker">Дневник давления и пульса</p><h1>Ритм давления</h1></div></div>
+<p class="lead">Для Android, без рекламы. Наведите камеру на экран тонометра — давление и пульс сами
+попадут в дневник.</p>
+<p class="buttons"><a class="btn" href="https://www.rustore.ru/catalog/app/ru.ivanovvl.ritmdavleniya?utm_source=site&amp;utm_content=main">Скачать в RuStore — бесплатно</a>
+<a class="btn btn-line" href="#ustanovka">Как установить</a></p>
+</div>
+<img class="hero-shot" src="img/scan.jpg" width="540" height="960" alt="Сканирование: камера читает 143/101 и пульс 59 с экрана тонометра Omron, запись готова к сохранению">
+</div>
+</header>
+
 <main>
-<h1>Ритм давления</h1>
-<p class="lead">Дневник давления и пульса для Android — без рекламы. Наведите камеру на экран тонометра,
-и давление с пульсом сами попадут в дневник.</p>
-<p><a class="store" href="https://www.rustore.ru/catalog/app/ru.ivanovvl.ritmdavleniya?utm_source=site&amp;utm_content=main">Скачать в RuStore — бесплатно</a></p>
-
-<figure class="shot">
-<img src="img/scan.jpg" width="540" height="960" alt="Сканирование: камера читает 143/101 и пульс 59 с экрана тонометра Omron, запись готова к сохранению">
-<figcaption>Скан экрана: проверьте цифры — запись сохранится сама.</figcaption>
-</figure>
-
-<ul>
+<ul class="features">
 <li>Любой способ записи: скан экрана тонометра, ручной ввод, Andon KD-5907 из Mi Home, давление других приложений из Health Connect.</li>
 <li>Графики, средние утром и вечером, категории давления ВОЗ, календарь месяца.</li>
 <li>PDF для врача за любой период — с графиком и средними на первой странице.</li>
 <li>Запись в Health Connect — давление увидит ЕМИАС.ИНФО.</li>
 <li>Напоминания утром и вечером. Журнал хранится только на телефоне.</li>
 </ul>
+
+<h2>Как это выглядит</h2>
+<div class="shots">
+<figure class="shot"><img src="img/home.jpg" width="540" height="960" loading="lazy" alt="Главный экран: последнее давление 124/84, категория «нормальное», пульс 67, среднее за 7 дней"><figcaption>Давление и пульс с тонометра — на главной.</figcaption></figure>
+<figure class="shot"><img src="img/stats.jpg" width="540" height="960" loading="lazy" alt="Статистика за месяц: среднее, утро и вечер, графики давления и пульса"><figcaption>Средние утром и вечером, графики.</figcaption></figure>
+<figure class="shot"><img src="img/journal.jpg" width="540" height="960" loading="lazy" alt="Журнал измерений по дням с категориями, заметками и метками «Кофе», «Лекарство», «Стресс»"><figcaption>Журнал с заметками и метками.</figcaption></figure>
+<figure class="shot"><img src="img/pdf.jpg" width="540" height="960" loading="lazy" alt="PDF «Дневник артериального давления»: сводка, категории ВОЗ, неделя домашних измерений"><figcaption>PDF для врача за любой период.</figcaption></figure>
+<figure class="shot"><img src="img/home-dark.jpg" width="540" height="960" loading="lazy" alt="Главный экран в тёмной теме"><figcaption>Тёмная тема — для вечера.</figcaption></figure>
+</div>
+
+<h2 id="ustanovka">Как установить</h2>
+<p>Нужен телефон с Android 9 или новее.</p>
+<ol class="steps">
+<li>Откройте на телефоне <b>RuStore</b> — магазин приложений. Если его нет, установите
+с <a href="https://www.rustore.ru/">rustore.ru</a>.</li>
+<li>Нажмите кнопку <b>«Скачать в RuStore»</b> вверху этой страницы — «Ритм давления» откроется в RuStore.</li>
+<li>Нажмите <b>«Установить»</b>. Значок приложения появится на экране телефона.</li>
+<li>Откройте приложение. При первом запуске оно спросит модель тонометра и предложит напоминания и запись для ЕМИАС — всё это можно поменять потом в настройках.</li>
+</ol>
+<p>Не получается — напишите на <a href="mailto:vladivv@bk.ru">vladivv@bk.ru</a>, подскажу.</p>
 
 <h2>Инструкции</h2>
 <ul class="guides">
@@ -74,7 +126,7 @@
 <p>Включите в настройках запись в Health Connect и дайте разрешения. ЕМИАС забирает из Health Connect
 только новые записи — откройте ЕМИАС.ИНФО после записи. Подробно — <a href="emias/">по шагам</a>.</p>
 
-<p class="muted"><a href="https://ivanovvl.ru/">Другие приложения</a> · <a href="en/">English</a> · <a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Условия подписки</a> · Приложение не является
+<p class="muted"><a href="https://ivanovvl.ru/">Другие приложения</a> · <a href="proizvoditelyam/">Производителям тонометров</a> · <a href="en/">English</a> · <a href="privacy.html">Политика конфиденциальности</a> · <a href="terms.html">Условия подписки</a> · Приложение не является
 медицинским изделием. Xiaomi, Mi Home и iHealth — товарные знаки их владельцев; приложение с ними не связано.</p>
 </main>
 </body>
