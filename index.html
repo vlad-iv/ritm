@@ -6,8 +6,8 @@
 <title>Ритм давления — дневник давления и пульса для Android</title>
 <meta name="description" content="Дневник давления и пульса без рекламы: скан экрана тонометра камерой, графики, PDF для врача, запись в ЕМИАС через Health Connect. Инструкции с фото.">
 <link rel="icon" href="img/icon.png" type="image/png">
-<link rel="stylesheet" href="style.css?v=4">
-<script src="/menu.js?v=1" defer></script>
+<link rel="stylesheet" href="style.css?v=7">
+<script src="/menu.js?v=2" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,6 +33,7 @@
 <a href="/pranayama/">Пранаяма</a>
 <a href="https://bigcaller.ru/">BigCaller</a>
 <a href="/#ustanovka">Как установить</a>
+<a href="/novosti/">Что нового</a>
 <a href="/podderzhka/">Помощь</a>
 </nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><svg class="i-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="menu-label">Меню</span></button>
@@ -61,7 +62,7 @@
 <p class="buttons"><a class="btn" href="https://www.rustore.ru/catalog/app/ru.ivanovvl.ritmdavleniya?utm_source=site&amp;utm_content=main">Скачать в RuStore — бесплатно</a>
 <a class="btn btn-line" href="#ustanovka">Как установить</a></p>
 </div>
-<img class="hero-shot" src="img/scan.jpg" width="540" height="960" alt="Сканирование: камера читает 143/101 и пульс 59 с экрана тонометра Omron, запись готова к сохранению">
+<img class="hero-shot" src="img/scan.jpg?v=2" width="540" height="960" alt="Сканирование: камера читает 143/101 и пульс 59 с экрана тонометра Omron, запись готова к сохранению">
 </div>
 </header>
 
@@ -75,13 +76,27 @@
 </ul>
 
 <h2>Как это выглядит</h2>
+<p class="shots-hint">Листайте картинки вбок →</p>
 <div class="shots">
-<figure class="shot"><img src="img/home.jpg" width="540" height="960" loading="lazy" alt="Главный экран: последнее давление 124/84, категория «нормальное», пульс 67, среднее за 7 дней"><figcaption>Давление и пульс с тонометра — на главной.</figcaption></figure>
-<figure class="shot"><img src="img/stats.jpg" width="540" height="960" loading="lazy" alt="Статистика за месяц: среднее, утро и вечер, графики давления и пульса"><figcaption>Средние утром и вечером, графики.</figcaption></figure>
-<figure class="shot"><img src="img/journal.jpg" width="540" height="960" loading="lazy" alt="Журнал измерений по дням с категориями, заметками и метками «Кофе», «Лекарство», «Стресс»"><figcaption>Журнал с заметками и метками.</figcaption></figure>
-<figure class="shot"><img src="img/pdf.jpg" width="540" height="960" loading="lazy" alt="PDF «Дневник артериального давления»: сводка, категории ВОЗ, неделя домашних измерений"><figcaption>PDF для врача за любой период.</figcaption></figure>
-<figure class="shot"><img src="img/home-dark.jpg" width="540" height="960" loading="lazy" alt="Главный экран в тёмной теме"><figcaption>Тёмная тема — для вечера.</figcaption></figure>
+<figure class="shot"><img src="img/home.jpg?v=2" width="540" height="960" loading="lazy" alt="Главный экран: последнее давление 124/84, категория «нормальное», пульс 67, среднее за 7 дней"><figcaption>Давление и пульс с тонометра — на главной.</figcaption></figure>
+<figure class="shot"><img src="img/stats.jpg?v=2" width="540" height="960" loading="lazy" alt="Статистика за месяц: среднее, утро и вечер, графики давления и пульса"><figcaption>Средние утром и вечером, графики.</figcaption></figure>
+<figure class="shot"><img src="img/calendar.jpg?v=2" width="540" height="960" loading="lazy" alt="Календарь месяца: дни окрашены цветом категории давления, сегодняшний день выделен"><figcaption>Календарь: дни цветом давления.</figcaption></figure>
+<figure class="shot"><img src="img/journal.jpg?v=2" width="540" height="960" loading="lazy" alt="Журнал измерений по дням с категориями, заметками и метками «Кофе», «Лекарство», «Стресс»"><figcaption>Журнал с заметками и метками.</figcaption></figure>
+<figure class="shot"><img src="img/pdf.jpg?v=2" width="540" height="960" loading="lazy" alt="PDF «Дневник артериального давления»: средние утром и вечером, график давления, сводка и категории ВОЗ"><figcaption>PDF для врача за любой период.</figcaption></figure>
+<figure class="shot"><img src="img/home-dark.jpg?v=2" width="540" height="960" loading="lazy" alt="Главный экран в тёмной теме"><figcaption>Тёмная тема — для вечера.</figcaption></figure>
 </div>
+
+<h2 id="novoe">Новое в версии 1.3</h2>
+<p>Версия готовится к выпуску в RuStore — выйдет после 1.2.0, которая сейчас на модерации.
+<a href="/novosti/#ritm-1.3.0">Все изменения</a>.</p>
+<ul>
+<li>PDF для врача: на первой странице — график и крупные средние утром и вечером (<a href="vrachu/">подробно</a>).</li>
+<li>Календарь месяца с цветными днями, из него — сразу в журнал на нужный день.</li>
+<li>Категория давления меняется прямо при вводе; справка «<a href="kak-izmeryat/">Как правильно измерять</a>».</li>
+<li>Переход из другого дневника: импорт чужого CSV с выбором столбцов (<a href="csv.html">формат файла</a>).</li>
+<li>Копия журнала раз в неделю в выбранную папку; после переустановки журнал восстанавливается из ваших записей в Health Connect.</li>
+<li>В настройках — «Как пользоваться» со ссылками на эти инструкции и «Поделиться приложением».</li>
+</ul>
 
 <h2 id="ustanovka">Как установить</h2>
 <p>Нужен телефон с Android 9 или новее.</p>
