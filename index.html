@@ -7,6 +7,17 @@
 <meta name="description" content="Дневник давления и пульса без рекламы: скан экрана тонометра камерой, графики, PDF для врача, запись в ЕМИАС через Health Connect. Инструкции с фото.">
 <link rel="icon" href="img/icon.png" type="image/png">
 <link rel="stylesheet" href="style.css?v=7">
+<style>
+/* QR-код RuStore в шапке — только на компьютере (здесь, а не в style.css: его версию ведёт appsite.py корня) */
+.qr-box { display: none; }
+@media (min-width: 760px) {
+  .qr-box { display: flex; align-items: center; gap: 16px; margin-top: 18px; padding: 12px 16px 12px 12px;
+    max-width: 460px; border-radius: 18px; background: rgba(255, 255, 255, 0.12); }
+  .qr-box img { flex: none; width: 140px; height: 140px; padding: 6px; border-radius: 10px; background: #fff; }
+  .qr-box p { margin: 0; font-size: 0.95rem; }
+}
+@media print { .qr-box { display: none !important; } }
+</style>
 <script src="/menu.js?v=2" defer></script>
 <script type="application/ld+json">
 {
@@ -61,6 +72,8 @@
 попадут в дневник.</p>
 <p class="buttons"><a class="btn" href="https://www.rustore.ru/catalog/app/ru.ivanovvl.ritmdavleniya?utm_source=site&amp;utm_content=main">Скачать в RuStore — бесплатно</a>
 <a class="btn btn-line" href="#ustanovka">Как установить</a></p>
+<div class="qr-box"><img src="img/rustore-qr.svg?v=1" width="140" height="140" alt="QR-код ссылки на «Ритм давления» в RuStore">
+<p>Открыли сайт на компьютере? Наведите камеру телефона на код — «Ритм давления» откроется в RuStore.</p></div>
 </div>
 <img class="hero-shot" src="img/scan.jpg?v=2" width="540" height="960" alt="Сканирование: камера читает 143/101 и пульс 59 с экрана тонометра Omron, запись готова к сохранению">
 </div>
