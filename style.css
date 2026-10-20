@@ -111,8 +111,7 @@ main.home h2 { border: 0; padding: 0; margin: 0; }
 }
 .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 4px; }
 .card .buttons { margin-bottom: 0; }
-.pair .card .buttons { flex-direction: column; }
-.pair .card .btn { width: 100%; }
+.pair .card .buttons .btn { flex: 1 1 100%; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 58px; padding: 12px 26px;
   border-radius: 16px; background: #fff; color: var(--ritm); border: 2px solid #fff;
@@ -200,7 +199,7 @@ html.menu-open { overflow: hidden; }
   .card a, .card-head, .app-hero a { color: #000 !important; }
   .card-head img { border-color: #999; }
   .steps li::before { background: #fff; color: #000; border: 2px solid #000; }
-  .faq summary::after { content: none; }
+  .faq summary::after, .faq details[open] summary::after { content: none; }
   a { color: #000; }
   .foot { display: none; }
 }
@@ -253,4 +252,6 @@ pre code { overflow-wrap: normal; }
 .app-hero .btn { color: var(--app); }
 .app-hero .btn-line { color: #fff; }
 .app-hero a:focus-visible { outline-color: #fff; }
+.app-hero .apk { margin: 12px 0 0; font-size: 0.9rem; }
+.app-hero .apk a { color: #fff; font-weight: 700; }
 .app-hero .hero-shot { flex: 1 1 200px; display: block; max-width: 220px; margin: 0 auto; border-radius: 18px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); }
